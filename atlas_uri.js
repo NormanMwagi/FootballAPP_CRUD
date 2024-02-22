@@ -1,4 +1,4 @@
-module.exports = uri = "mongodb+srv://myAtlasDBUser:Mamba824.@myatlasclusteredu.qirhlwa.mongodb.net/?retryWrites=true&w=majority";
+module.exports = uri = "mongodb+srv://myAtlasDBUser:<Password>@myatlasclusteredu.qirhlwa.mongodb.net/?retryWrites=true&w=majority";
 
 const mongoose = require('mongoose');
 const connectToDatabase = async () => {

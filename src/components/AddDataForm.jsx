@@ -71,33 +71,47 @@ const AddDataForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="team">Team Name:</label>
+    <form onSubmit={handleSubmit} className="row g-3">
+    <div className="col-md-6">
+      <label htmlFor="team" className="form-label">Team Name:</label>
       <input
         type="text"
         name="team"
         value={formData.team}
         onChange={handleChange}
         id="team"
+        className="form-control"
       />
-      <label htmlFor="gamesPlayed">Games Played:</label>
+    </div>
+    <div className="col-md-6">
+      <label htmlFor="gamesPlayed" className="form-label">Games Played:</label>
       <input
         type="number"
         name="gamesPlayed"
         value={formData.gamesPlayed}
         onChange={handleChange}
         id="gamesPlayed"
+        className="form-control"
       />
-      <label htmlFor="wins">Wins:</label>
+    </div>
+    <div className="col-md-6">
+      <label htmlFor="wins" className="form-label">Wins:</label>
       <input
         type="number"
         name="wins"
         value={formData.wins}
         onChange={handleChange}
         id="wins"
+        className="form-control"
       />
+    </div>
+    
       {/* Add similar input fields for remaining data points (draws, loss, goalsFor, goalsAgainst, points, year) */}
-      <button type="submit" disabled={isSubmitting}>Add Data</button>
+      <div className="col-12">
+    <button type="submit" disabled={isSubmitting} className="btn btn-primary">
+      Add Data
+    </button>
+    </div>
       {Object.keys(validationErrors).map((field) => (
         <p key={field} className="error-message">{validationErrors[field]}</p>
       ))}
